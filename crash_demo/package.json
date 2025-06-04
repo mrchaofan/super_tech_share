@@ -1,0 +1,10 @@
+{
+  "name": "crash_demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "node-addon-api": "^8.3.1",
+    "node-gyp": "^11.2.0"
+  }
+}
