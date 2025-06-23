@@ -28,9 +28,9 @@ void SetAsLocal(const v8::FunctionCallbackInfo<v8::Value> &args) {
 
   
   if (args.Length() >= 2 && args[1]->IsBoolean() && args[1].As<v8::Boolean>()->Value() == true) {
-    v8::Local<v8::Value> params[] = {lv};
+    v8::Local<v8::Value> params[] = {lv, pv.Get(args.GetIsolate())};
     cb.Get(args.GetIsolate())
-        ->Call(args.GetIsolate()->GetCurrentContext(), args.This(), 1, params)
+        ->Call(args.GetIsolate()->GetCurrentContext(), args.This(), 2, params)
         .ToLocalChecked();
   }
 }
